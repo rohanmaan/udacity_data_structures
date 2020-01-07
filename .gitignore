@@ -1,0 +1,8 @@
+*.vscode/
+P0/BUILD
+WORKSPACE
+bazel-bin
+bazel-out
+bazel-testlogs
+bazel-udacity_data_structures
+

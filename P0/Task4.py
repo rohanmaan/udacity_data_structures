@@ -24,4 +24,16 @@ Print a message:
 <list of numbers>
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
+correct_nos = set()
+for phone in texts:
+	correct_nos.add(phone[0])
+	correct_nos.add(phone[1])
+for each in calls:
+	correct_nos.add(each[1])
 
+scam_nos = set()
+print("These numbers could be telemarketers: ")
+for each in calls:
+	if each[0] not in  correct_nos :
+		scam_nos.add(each[0])
+print(sorted(scam_nos))

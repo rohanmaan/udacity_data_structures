@@ -43,3 +43,27 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+list_of_codes_prefixes = set()
+bangalore_callers_count = 0
+bangalore_called_count = 0
+def return_code_prefix(telephone_called):
+	if ' ' in telephone_called:
+		return telephone_called[0:4]
+	elif '(' in telephone_called:
+		return telephone_called[1:telephone_called.find(')')]
+	else:
+		return None
+def print_line(codes_prefixes):
+	for i in codes_prefixes:
+		print(i)
+
+for each in calls:
+	if '(080)' in each[0]:
+		bangalore_callers_count += 1 
+		list_of_codes_prefixes.add(return_code_prefix(each[1]))
+		if '(080)' in each[1]:
+			bangalore_called_count += 1
+
+print("The numbers called by people in Bangalore have codes:")
+print_line(sorted(list_of_codes_prefixes))
+print("{0} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(round(bangalore_called_count / bangalore_callers_count * 100, 2)))

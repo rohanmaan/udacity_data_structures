@@ -1,0 +1,48 @@
+Task 0
+
+The input here is dynamic array of dynamic array ie list of lists in python .
+Therefore , our algorithm performs at O(1+1) which is O(1)  ie constant time because we are just indexing  the array of arrays.
+
+Space complexity is also O(1) as we are not creating any new memory when passed in format function in print argument as it is always taken by reference in python. 
+
+PS : Here we ignore the time complexity of format function calls 
+
+Task 1
+
+Here we have 2 independent for loops. Each loop performs n operations (in operator traverses the complete list till end. 
+The add function runs with constant complexity . Thus Big O is O(2n + 1 + 1) = O(n).
+
+Since we create a set , and add an element 2n times (n iterations in 2 loops).The Space complexity is O(2n) = O(n) increases linearly.
+
+PS : Here we ignore the time complexity of format function calls 
+
+Task 2
+
+Here, we traverse the calls list , and use a hash map to store key value pair.
+There are n operations (no of elements in calls) in the for loop.And one traversel over the sequence list_of_phone_numbers(2n maximum possible keys) for finding the max time .
+Thus, time complexity is O(n + 2n) = O(n)
+
+Space complexity is O(2n) = O(n) [As we create a dictionary list_of_phone_numbers of max 2n keys]
+
+PS : Here we ignore the time complexity of format function calls 
+
+Task 3
+
+Here we have one for loop , to create a set of the numbers called by people in Bangalore codes.
+Thus, there are n approx operations .Also , to print we use sorted functionality which runs at O(nlogn)
+Complexity is O(n + nlogn) = O(nlogn)
+
+Space complexity is O(n)
+
+PS : Here we ignore the time complexity of format function calls 
+
+Task 4
+
+Here in order to create a set of true correct phone numbers, we use 3 independent for loops(Technically the in operator on an iterator object in python) ie 3n operations.
+Then , to check for scammers we again, iterate in calls list  ie n operations more. For displaying lexicographically we use sorted functionaly with complexity O(nlogn)
+Total complexity is O(4n + nlogn) = O(nlogn)
+
+We create two sets correct_nos(of max 2n elements) and scam_nos(of max m elements)
+Space complexity is O(n + m) 
+
+
