@@ -36,4 +36,4 @@ print("These numbers could be telemarketers: ")
 for each in calls:
 	if each[0] not in  correct_nos :
 		scam_nos.add(each[0])
-print(sorted(scam_nos))
+print(*sorted(scam_nos), sep='\n')

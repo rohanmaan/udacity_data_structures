@@ -12,7 +12,7 @@ Task 1
 Here we have 2 independent for loops. Each loop performs n operations (in operator traverses the complete list till end. 
 The add function runs with constant complexity . Thus Big O is O(2n + 1 + 1) = O(n).
 
-Since we create a set , and add an element 2n times (n iterations in 2 loops).The Space complexity is O(2n) = O(n) increases linearly.
+Since we create a set , and add an element( O(1) for adding in set ) 2n times (n iterations in 2 loops).The Space complexity is O(2n) = O(n) increases linearly.
 
 PS : Here we ignore the time complexity of format function calls 
 

@@ -21,6 +21,8 @@ Print a message:
 telephone_numbers = set()
 for each in texts:
 	telephone_numbers.add(each[0])
+	telephone_numbers.add(each[1])
 for each in calls:
 	telephone_numbers.add(each[0])
+	telephone_numbers.add(each[1])
 print("There are {0} different telephone numbers in the records.".format(len(telephone_numbers)))
